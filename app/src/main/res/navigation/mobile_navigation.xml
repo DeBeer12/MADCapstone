@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.madcapstone.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.madcapstone.ui.map.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map" >
+    </fragment>
+    <fragment
+        android:id="@+id/packingFragment"
+        android:name="com.example.madcapstone.ui.packing.PackingFragment"
+        android:label="@string/title_list"
+        tools:layout="@layout/fragment_packing" >
+    </fragment>
+    <fragment
+        android:id="@+id/payFragment"
+        android:name="com.example.madcapstone.ui.pay.PayFragment"
+        android:label="@string/title_pay" >
+    </fragment>
+</navigation>

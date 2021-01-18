@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MADCapstone</string>
+    <string name="title_home">Home</string>
+    <string name="title_pay">Pay</string>
+    <string name="title_list">Packing List</string>
+    <string name="title_map">Map</string>
+
+    <string name="pay">PAY</string>
+</resources>
