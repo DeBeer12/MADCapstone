@@ -6,23 +6,23 @@ class ItemRepository(context: Context) {
     private var itemDao: ItemDao
 
     init {
-        val reminderRoomDatabase = ItemRoomDatabase.getDatabase(context)
-        itemDao = reminderRoomDatabase!!.itemDao()
+        val itemRoomDatabase = ItemRoomDatabase.getDatabase(context)
+        itemDao = itemRoomDatabase!!.itemDao()
     }
 
-    suspend fun getAllReminders(): List<Item> {
+    suspend fun getAllItems(): List<Item> {
         return itemDao.getAllItems()
     }
 
-    suspend fun insertReminder(item: Item) {
+    suspend fun insertItem(item: Item) {
         itemDao.insertItem(item)
     }
 
-    suspend fun deleteReminder(item: Item) {
+    suspend fun deleteItem(item: Item) {
         itemDao.deleteItem(item)
     }
 
-    suspend fun updateReminder(item: Item) {
+    suspend fun updateItem(item: Item) {
         itemDao.updateItem(item)
     }
 }

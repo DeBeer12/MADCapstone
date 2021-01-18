@@ -9,11 +9,11 @@ interface ItemDao {
     suspend fun getAllItems(): List<Item>
 
     @Insert
-    suspend fun insertItem(reminder: Item)
+    suspend fun insertItem(item: Item)
 
     @Delete
-    suspend fun deleteItem(reminder: Item)
+    suspend fun deleteItem(item: Item)
 
     @Update
-    suspend fun updateItem(reminder: Item)
+    suspend fun updateItem(item: Item)
 }

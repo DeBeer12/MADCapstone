@@ -1,11 +1,13 @@
 package com.example.madcapstone.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +16,7 @@ import com.example.madcapstone.R
 import com.example.madcapstone.databinding.FragmentHomeBinding
 import com.example.madcapstone.db.Band
 import com.example.madcapstone.db.BandAdapter
+import com.example.madcapstone.ui.pay.PayFragment
 
 
 class HomeFragment : Fragment() {
@@ -29,16 +32,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
-//        setSupportActionBar(binding.toolbar)
-//        setContentView(binding.root)
-//        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        //        val payBtn: Button = root.findViewById(R.id.button)
-//        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-//            payBtn.setOnClickListener {  }
-
-
-        return inflater.inflate(R.layout.fragment_home, container, false)
+           return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -52,14 +46,16 @@ class HomeFragment : Fragment() {
                 DividerItemDecoration.VERTICAL
             )
         )
-
-        initBands()
-        loadWebview(view)
-//        initViews()
-    }
-
-    private fun initViews(){
-
+val btn = view.findViewById<Button>(R.id.button)
+        btn.setOnClickListener {
+            Log.e("Test", "Button")
+//                    supportFragmentManager.beginTransaction().replace(
+//            R.id.nav_host_fragment,
+//            PayFragment()
+//        ).commit() }
+//        initBands()
+//        loadWebview(view)
+        }
     }
 
     private fun initBands(){

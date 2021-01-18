@@ -5,30 +5,30 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Item::class], version = 1, exportSchema = false)
-abstract class ItemRoomDatabase : RoomDatabase() {
-    abstract fun itemDao(): ItemDao
+@Database(entities = [Product::class], version = 1, exportSchema = false)
+abstract class ProductRoomDatabase : RoomDatabase() {
+    abstract fun productDao(): ProductDao
 
     companion object {
-        private const val DATABASE_NAME = "ITEM_DATABASE"
+        private const val DATABASE_NAME = "PRODUCT_DATABASE"
 
         @Volatile
-        private var itemRoomDatabaseInstance: ItemRoomDatabase? = null
+        private var productRoomDatabaseInstance: ProductRoomDatabase? = null
 
-        fun getDatabase(context: Context): ItemRoomDatabase? {
-            if (itemRoomDatabaseInstance == null) {
-                synchronized(ItemRoomDatabase::class.java) {
-                    if (itemRoomDatabaseInstance == null) {
-                        itemRoomDatabaseInstance = Room.databaseBuilder(
+        fun getDatabase(context: Context): ProductRoomDatabase? {
+            if (productRoomDatabaseInstance == null) {
+                synchronized(ProductRoomDatabase::class.java) {
+                    if (productRoomDatabaseInstance == null) {
+                        productRoomDatabaseInstance = Room.databaseBuilder(
                             context.applicationContext,
-                            ItemRoomDatabase::class.java, DATABASE_NAME
+                            ProductRoomDatabase::class.java, DATABASE_NAME
                         )
 //                            .allowMainThreadQueries()
                             .build()
                     }
                 }
             }
-            return itemRoomDatabaseInstance
+            return productRoomDatabaseInstance
         }
     }
 }

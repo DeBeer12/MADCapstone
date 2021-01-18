@@ -9,6 +9,9 @@
         android:name="com.example.madcapstone.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_payFragment2"
+            app:destination="@id/payFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapFragment"
@@ -25,6 +28,7 @@
     <fragment
         android:id="@+id/payFragment"
         android:name="com.example.madcapstone.ui.pay.PayFragment"
-        android:label="@string/title_pay" >
+        android:label="@string/title_pay"
+        tools:layout="@layout/fragment_pay">
     </fragment>
 </navigation>

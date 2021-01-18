@@ -6,4 +6,11 @@
     <string name="title_map">Map</string>
 
     <string name="pay">PAY</string>
+    <string name="food">Food</string>
+    <string name="drinks">Drinks</string>
+    <string name="merch">Merchandise</string>
+    <string name="amount">amount</string>
+
+    <string name="add">Add</string>
+    <string name="dialogTitle">Add a Store and a Amount to your total</string>
 </resources>

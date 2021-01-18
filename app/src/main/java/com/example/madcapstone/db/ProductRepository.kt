@@ -2,27 +2,27 @@ package com.example.madcapstone.db
 
 import android.content.Context
 
-class ItemRepository(context: Context) {
-    private var itemDao: ItemDao
+class ProductRepository(context: Context) {
+    private lateinit var productDao: ProductDao
 
     init {
-        val reminderRoomDatabase = ItemRoomDatabase.getDatabase(context)
-        itemDao = reminderRoomDatabase!!.itemDao()
+        val productRoomDatabase = ProductRoomDatabase.getDatabase(context)
+        productDao = productRoomDatabase!!.productDao()
     }
 
-    suspend fun getAllItems(): List<Item> {
-        return itemDao.getAllItems()
+    suspend fun getAllProducts(): List<Product> {
+        return productDao.getAllProducts()
     }
 
-    suspend fun insertItem(item: Item) {
-        itemDao.insertItem(item)
+    suspend fun insertProduct(product: Product) {
+        productDao.insertProduct(product)
     }
 
-    suspend fun deleteItem(item: Item) {
-        itemDao.deleteItem(item)
+    suspend fun deleteProduct(product: Product) {
+        productDao.deleteProduct(product)
     }
 
-    suspend fun updateItem(item: Item) {
-        itemDao.updateItem(item)
+    suspend fun updateProduct(product: Product) {
+        productDao.updateProduct(product)
     }
 }

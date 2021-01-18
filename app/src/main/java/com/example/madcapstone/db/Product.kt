@@ -4,11 +4,13 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "itemTable")
+@Entity(tableName = "productTable")
 
-data class Item (
-    @ColumnInfo(name = "item")
-    var itemText: String,
+data class Product (
+    @ColumnInfo(name = "productAmount")
+    var productText: Double,
+    @ColumnInfo(name = "productStore")
+    var storeText: String,
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

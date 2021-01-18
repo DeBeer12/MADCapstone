@@ -5,16 +5,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.madcapstone.R
-//import com.example.madcapstone.databinding.ItemReminderBinding
+import com.example.madcapstone.databinding.ItemItemBinding
 
 class ItemAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
         inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-//            private val binding = ItemReminderBinding.bind(itemView)
+            private val binding = ItemItemBinding.bind(itemView)
 
             fun databind(item: Item) {
-//                binding.cbItem. = item.reminderText
+                binding.cbItem.text = item.itemText
             }
         }
 

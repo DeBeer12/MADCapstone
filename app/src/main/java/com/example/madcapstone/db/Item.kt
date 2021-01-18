@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 
 data class Item (
     @ColumnInfo(name = "item")
-    var reminderText: String,
+    var itemText: String,
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

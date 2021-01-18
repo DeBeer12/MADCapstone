@@ -3,17 +3,17 @@ package com.example.madcapstone.db
 import androidx.room.*
 
 @Dao
-interface ItemDao {
+interface ProductDao {
 
-    @Query("SELECT * FROM itemTable")
-    suspend fun getAllItems(): List<Item>
+    @Query("SELECT * FROM productTable")
+    suspend fun getAllProducts(): List<Product>
 
     @Insert
-    suspend fun insertItem(reminder: Item)
+    suspend fun insertProduct(product: Product)
 
     @Delete
-    suspend fun deleteItem(reminder: Item)
+    suspend fun deleteProduct(product: Product)
 
     @Update
-    suspend fun updateItem(reminder: Item)
+    suspend fun updateProduct(product: Product)
 }
